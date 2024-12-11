@@ -1,0 +1,81 @@
+/* Custom styles to enhance the Tailwind CSS design */
+body {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+input[type="text"]::placeholder {
+    color: #6b7280; /* Tailwind gray-400 */
+    opacity: 0.8;
+}
+
+/* Style for weather info */
+#weatherInfo {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for extended forecast */
+#extendedForecast {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* Style for individual forecast cards */
+#extendedForecast div {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 1rem;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 180px;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile styles */
+@media (max-width: 640px) {
+    .container {
+        padding: 2rem;
+    }
+
+    #extendedForecast {
+        flex-direction: column;
+    }
+}
+
+/* Tablet styles */
+@media (min-width: 641px) and (max-width: 1024px) {
+    .container {
+        max-width: 80%;
+        padding: 3rem;
+    }
+
+    input[type="text"] {
+        width: 80%;
+    }
+}
+
+/* Desktop styles */
+@media (min-width: 1025px) {
+    .container {
+        max-width: 60%;
+        padding: 3rem;
+    }
+
+    input[type="text"] {
+        width: 60%;
+    }
+}
